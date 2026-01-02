@@ -25,9 +25,8 @@ export const routePaths = {
   TICKET_DETAIL: '/soporte/:id',
 
   // Configuración (Ronny)
-  CONFIG_ID: '/config/IDCard',
-  CONFIG_NOTIFICATIONS: '/config/notifications',
-
+  CONFIG_ID: '/config/tarjetaID',
+  CONFIG_NOTIFICATIONS: '/config/notificaciones',
 
   // Errores
   NOT_FOUND: '/404',

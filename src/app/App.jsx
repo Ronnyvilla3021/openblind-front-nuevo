@@ -17,7 +17,7 @@ import ConfigAccesibilidadScreen from '@modules/configuracion/screens/ConfigAcce
 import ConfigNavegacionScreen from '@modules/configuracion/screens/ConfigNavegacionScreen'
 import ConfigPrivacidadScreen from '@modules/configuracion/screens/ConfigPrivacidadScreen'
 import ConfigTarjetaID from "@modules/config/screens/IDCardConfigScreen";
-import ConfigNotificaciones from '@modules/config/screens/NotificationsConfigScreen.tsx'
+import ConfigNotificaciones from '@modules/config/screens/NotificationsConfigScreen'
 
 function App() {
   return (
@@ -41,9 +41,10 @@ function App() {
           </Route>
 
           {/* Config - Ronny Villa */}
-          <Route path="tarjetaID" element={<ConfigTarjetaID />} />
-          <Route path="notificaciones" element={<ConfigNotificaciones />} />
-
+          <Route path="config">
+            <Route path="tarjetaID" element={<ConfigTarjetaID />} />
+            <Route path="notificaciones" element={<ConfigNotificaciones />} />
+          </Route>
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Route>
       </Routes>

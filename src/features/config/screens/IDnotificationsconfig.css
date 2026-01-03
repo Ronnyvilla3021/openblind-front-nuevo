@@ -1,0 +1,1299 @@
+/**
+ * CSS mejorado para Configuración de Tarjeta ID - Features
+ * Prefijo: feat-idcard-
+ * 
+ * @author VILLA REYES RONNY XAVIER (N°4)
+ * @updated Diseño mejorado con iconos
+ */
+
+/* ═══════════════════════════════════════════════════
+   TARJETA ID - FEATURES (Prefijo: feat-idcard-)
+   ═══════════════════════════════════════════════════ */
+
+.feat-idcard-config-screen {
+  padding: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header mejorado */
+.feat-idcard-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-8);
+  padding-bottom: var(--spacing-6);
+  border-bottom: 2px solid var(--color-primary-500);
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(147, 51, 234, 0.05) 100%);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+}
+
+.feat-idcard-page-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.feat-idcard-page-header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.feat-idcard-page-header h1::before {
+  content: "🪪";
+  font-size: var(--font-size-2xl);
+}
+
+.feat-idcard-page-header p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Stats mejoradas */
+.feat-idcard-header-stats {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.feat-idcard-stat-box {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+  min-width: 120px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.feat-idcard-stat-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-400);
+}
+
+.feat-idcard-stat-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feat-idcard-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Contenido de configuración */
+.feat-idcard-config-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+/* Tarjetas mejoradas */
+.feat-idcard-config-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.feat-idcard-config-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary-400);
+  transform: translateY(-2px);
+}
+
+.feat-idcard-config-card .card-header {
+  background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+  padding: var(--spacing-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feat-idcard-config-card .card-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
+}
+
+.feat-idcard-config-card .card-title::before {
+  font-size: var(--font-size-lg);
+}
+
+.feat-idcard-config-card[data-type="fields"] .card-title::before {
+  content: "📋";
+}
+
+.feat-idcard-config-card[data-type="qr"] .card-title::before {
+  content: "🔳";
+}
+
+.feat-idcard-config-card .card-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+
+/* Secciones de configuración */
+.feat-idcard-config-section {
+  padding: var(--spacing-6);
+}
+
+.feat-idcard-config-item {
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.feat-idcard-config-item:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-primary-300);
+}
+
+.feat-idcard-config-item:last-child {
+  margin-bottom: 0;
+}
+
+.feat-idcard-config-item > label:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3);
+  cursor: pointer;
+}
+
+.feat-idcard-config-item > label:first-child::before {
+  font-size: var(--font-size-lg);
+  width: 24px;
+  text-align: center;
+}
+
+/* Iconos específicos para cada campo */
+.feat-idcard-config-item[data-field="nombreCompleto"] > label:first-child::before {
+  content: "👤";
+}
+
+.feat-idcard-config-item[data-field="email"] > label:first-child::before {
+  content: "✉️";
+}
+
+.feat-idcard-config-item[data-field="telefono"] > label:first-child::before {
+  content: "📱";
+}
+
+.feat-idcard-config-item[data-field="direccion"] > label:first-child::before {
+  content: "📍";
+}
+
+.feat-idcard-config-item[data-field="tipoSangre"] > label:first-child::before {
+  content: "💉";
+}
+
+.feat-idcard-config-item[data-option="qrIncluirFoto"] > label:first-child::before {
+  content: "📸";
+}
+
+.feat-idcard-config-item[data-option="qrContactosEmergencia"] > label:first-child::before {
+  content: "🚨";
+}
+
+.feat-idcard-config-item[data-option="qrInfoMedica"] > label:first-child::before {
+  content: "🏥";
+}
+
+.feat-idcard-config-item[data-option="qrTipoSangre"] > label:first-child::before {
+  content: "🩸";
+}
+
+.feat-idcard-config-item[data-option="qrAlergias"] > label:first-child::before {
+  content: "🤧";
+}
+
+.feat-idcard-config-item[data-option="qrDiasExpiracion"] > label:first-child::before {
+  content: "⏰";
+}
+
+/* ═══════════════════════════════════════════════════
+   CHECKBOXES MÁS GRANDES - FEATURES
+   ═══════════════════════════════════════════════════ */
+
+/* Checkboxes más grandes para campos de tarjeta */
+.feat-idcard-checkbox-label input[type="checkbox"] {
+  width: 28px !important; /* Aumentado de 20px */
+  height: 28px !important; /* Aumentado de 20px */
+  cursor: pointer;
+  accent-color: var(--color-primary-600);
+  border-radius: var(--radius-md) !important; /* Cambiado de sm a md */
+  border: 3px solid var(--color-border-medium) !important; /* Aumentado de 2px */
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.feat-idcard-checkbox-label input[type="checkbox"]:checked {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  position: relative;
+}
+
+/* Añadir tick más grande para checkboxes marcados */
+.feat-idcard-checkbox-label input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 18px !important; /* Tick más grande */
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Aumentar tamaño del texto junto a los checkboxes */
+.feat-idcard-checkbox-label span {
+  color: var(--color-text-primary);
+  font-weight: 600; /* Aumentado de 500 */
+  font-size: var(--font-size-base) !important; /* Asegurar tamaño base */
+  line-height: 1.5;
+}
+
+/* Checkboxes para opciones obligatorias más grandes */
+.feat-idcard-ml-3 {
+  margin-left: var(--spacing-6);
+  padding: var(--spacing-2) var(--spacing-3) !important; /* Aumentado de spacing-1 */
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg) !important; /* Aumentado de md */
+  border: 2px solid var(--color-border-light) !important; /* Aumentado de 1px */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* Checkbox específico para "Obligatorio" */
+.feat-idcard-ml-3 input[type="checkbox"] {
+  width: 24px !important;
+  height: 24px !important;
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--radius-sm);
+}
+
+.feat-idcard-ml-3 span {
+  font-size: var(--font-size-sm) !important;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* Aumentar iconos de campos */
+.feat-idcard-config-item > label:first-child::before {
+  font-size: var(--font-size-xl) !important; /* Aumentado de lg */
+  width: 32px !important; /* Aumentado de 24px */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mejorar visualización de los elementos de configuración */
+.feat-idcard-config-item {
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-4) !important; /* Aumentado de spacing-3 */
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border-light) !important; /* Aumentado de 1px */
+  transition: all var(--transition-fast);
+}
+
+.feat-idcard-config-item:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-primary-300);
+}
+
+/* Mejorar etiquetas de campos */
+.feat-idcard-config-item > label:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4) !important; /* Aumentado de spacing-3 */
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3);
+  cursor: pointer;
+}
+
+/* Para los badges de recomendación */
+.feat-idcard-recommended {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  background: linear-gradient(135deg, var(--color-success-100), var(--color-success-50));
+  color: var(--color-success-700);
+  padding: var(--spacing-2) var(--spacing-3) !important; /* Aumentado */
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-left: var(--spacing-2);
+  border: 2px solid var(--color-success-300); /* Aumentado */
+}
+
+.feat-idcard-recommended::before {
+  content: "⭐";
+  font-size: var(--font-size-base) !important; /* Aumentado de sm */
+}
+
+/* Slider mejorado */
+.feat-idcard-slider-container {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+}
+
+.feat-idcard-slider-container label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.feat-idcard-slider-container label::before {
+  content: "⏳";
+  font-size: var(--font-size-lg);
+}
+
+.feat-idcard-days-display {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-primary-600);
+  text-align: center;
+  margin-bottom: var(--spacing-3);
+  padding: var(--spacing-2);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary-200);
+}
+
+.feat-idcard-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, var(--color-primary-300), var(--color-primary-600));
+  outline: none;
+  -webkit-appearance: none;
+  margin-bottom: var(--spacing-4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feat-idcard-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-600);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.feat-idcard-slider::-webkit-slider-thumb:hover {
+  background: var(--color-primary-700);
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.feat-idcard-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-600);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Presets mejorados */
+.feat-idcard-quick-presets {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.feat-idcard-quick-presets button {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+}
+
+.feat-idcard-quick-presets button:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-400);
+  transform: translateY(-1px);
+}
+
+.feat-idcard-quick-presets button.feat-idcard-active {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  color: white;
+  border-color: var(--color-primary-600);
+  box-shadow: var(--shadow-md);
+}
+
+.feat-idcard-quick-presets button:first-child::before {
+  content: "📅";
+}
+
+.feat-idcard-quick-presets button:nth-child(2)::before {
+  content: "🗓️";
+}
+
+.feat-idcard-quick-presets button:last-child::before {
+  content: "📆";
+}
+
+/* Botones de acción */
+.feat-idcard-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.feat-idcard-save-button {
+  min-width: 220px;
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  box-shadow: var(--shadow-lg);
+}
+
+.feat-idcard-save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, var(--color-primary-700), var(--color-primary-800));
+}
+
+.feat-idcard-save-button:active {
+  transform: translateY(0);
+}
+
+.feat-idcard-save-button::before {
+  content: "💾";
+  font-size: var(--font-size-xl);
+}
+
+/* Indicadores de recomendación */
+.feat-idcard-recommended {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  background: linear-gradient(135deg, var(--color-success-100), var(--color-success-50));
+  color: var(--color-success-700);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-left: var(--spacing-2);
+}
+
+.feat-idcard-recommended::before {
+  content: "⭐";
+}
+
+/* ═══════════════════════════════════════════════════
+   ANIMACIONES
+   ═══════════════════════════════════════════════════ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0);
+  }
+}
+
+.feat-idcard-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .feat-idcard-config-screen {
+    padding: var(--spacing-4);
+  }
+
+  .feat-idcard-page-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+  }
+
+  .feat-idcard-header-stats {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .feat-idcard-stat-box {
+    min-width: calc(33.333% - var(--spacing-3));
+    margin-bottom: var(--spacing-2);
+  }
+
+  .feat-idcard-config-item {
+    padding: var(--spacing-3);
+  }
+
+  .feat-idcard-quick-presets {
+    flex-direction: column;
+  }
+
+  .feat-idcard-action-buttons {
+    flex-direction: column;
+  }
+
+  .feat-idcard-save-button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .feat-idcard-stat-box {
+    min-width: calc(50% - var(--spacing-2));
+  }
+  
+  .feat-idcard-config-item > label:first-child {
+    font-size: var(--font-size-sm);
+  }
+}
+
+
+
+
+/* ═══════════════════════════════════════════════════
+   NOTIFICACIONES - FEATURES (Prefijo: feat-notif-)
+   Versión mejorada con iconos
+   ═══════════════════════════════════════════════════ */
+
+.feat-notif-config-screen {
+  padding: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header mejorado con iconos */
+.feat-notif-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-6);
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.feat-notif-page-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.feat-notif-page-header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.feat-notif-page-header h1::before {
+  content: "🔔";
+  font-size: var(--font-size-2xl);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feat-notif-page-header p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Stats mejoradas */
+.feat-notif-header-stats {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.feat-notif-stat-box {
+  background: var(--color-bg-primary);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+  min-width: 120px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.feat-notif-stat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.feat-notif-stat-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: #3b82f6;
+}
+
+.feat-notif-stat-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: var(--spacing-1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feat-notif-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Contenido de configuración */
+.feat-notif-config-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+/* Tarjetas mejoradas */
+.feat-notif-config-card {
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.feat-notif-config-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.feat-notif-config-card .card-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  padding: var(--spacing-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feat-notif-config-card .card-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
+}
+
+.feat-notif-config-card .card-title::before {
+  font-size: var(--font-size-lg);
+}
+
+.feat-notif-config-card[data-type="channels"] .card-title::before {
+  content: "📡";
+}
+
+.feat-notif-config-card[data-type="templates"] .card-title::before {
+  content: "📝";
+}
+
+.feat-notif-config-card .card-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+}
+
+/* Secciones de configuración */
+.feat-notif-config-section {
+  padding: var(--spacing-6);
+}
+
+/* Items de configuración mejorados */
+.feat-notif-config-item {
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-config-item:hover {
+  background: var(--color-bg-hover);
+  border-color: #3b82f6;
+}
+
+.feat-notif-config-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Canales de notificación */
+.feat-notif-channel-item {
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-channel-item:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-primary-300);
+}
+
+.feat-notif-channel-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+  cursor: pointer;
+}
+
+.feat-notif-channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.feat-notif-channel-header[data-channel="push"] .feat-notif-channel-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.feat-notif-channel-header[data-channel="email"] .feat-notif-channel-icon {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+}
+
+.feat-notif-channel-header[data-channel="sms"] .feat-notif-channel-icon {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+}
+
+.feat-notif-channel-label {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+/* Subitems de notificación */
+.feat-notif-subitems {
+  padding-left: var(--spacing-10);
+  margin-top: var(--spacing-3);
+  animation: slideDown 0.3s ease-out;
+}
+
+.feat-notif-subitem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-subitem:hover {
+  background: var(--color-bg-hover);
+}
+
+.feat-notif-subitem-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.feat-notif-subitem[data-type="route_start"] .feat-notif-subitem-icon {
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+  color: white;
+}
+
+.feat-notif-subitem[data-type="route_end"] .feat-notif-subitem-icon {
+  background: linear-gradient(135deg, #fbbf24, #f472b6);
+  color: white;
+}
+
+.feat-notif-subitem[data-type="safety_alert"] .feat-notif-subitem-icon {
+  background: linear-gradient(135deg, #f87171, #fb923c);
+  color: white;
+}
+
+.feat-notif-subitem[data-type="support_message"] .feat-notif-subitem-icon {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  color: white;
+}
+
+.feat-notif-subitem[data-type="emergency"] .feat-notif-subitem-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.feat-notif-subitem-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Plantillas de mensajes */
+.feat-notif-template-item {
+  margin-bottom: var(--spacing-6);
+  padding: var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-template-item:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-primary-300);
+}
+
+.feat-notif-template-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.feat-notif-template-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+  color: white;
+  flex-shrink: 0;
+}
+
+.feat-notif-template-label {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.feat-notif-template-fields {
+  margin-top: var(--spacing-4);
+  animation: slideDown 0.3s ease-out;
+}
+
+.feat-notif-field-group {
+  margin-bottom: var(--spacing-4);
+}
+
+.feat-notif-field-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.feat-notif-field-label::before {
+  font-size: var(--font-size-base);
+}
+
+.feat-notif-field-label[data-field="subject"]::before {
+  content: "📌";
+}
+
+.feat-notif-field-label[data-field="body"]::before {
+  content: "📄";
+}
+
+.feat-notif-input {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.feat-notif-textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  resize: vertical;
+  min-height: 100px;
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Área legal */
+.feat-notif-legal-area {
+  margin-top: var(--spacing-6);
+  padding: var(--spacing-4);
+  background: linear-gradient(135deg, 
+    rgba(147, 51, 234, 0.05), 
+    rgba(59, 130, 246, 0.05));
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+}
+
+.feat-notif-legal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.feat-notif-legal-header::before {
+  content: "⚖️";
+  font-size: var(--font-size-xl);
+}
+
+.feat-notif-legal-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.feat-notif-legal-textarea {
+  width: 100%;
+  padding: var(--spacing-4);
+  border: 2px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  resize: vertical;
+  min-height: 120px;
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-legal-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Botones de acción */
+.feat-notif-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.feat-notif-save-button {
+  min-width: 280px;
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  box-shadow: var(--shadow-lg);
+}
+
+.feat-notif-save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.feat-notif-save-button:active {
+  transform: translateY(0);
+}
+
+.feat-notif-save-button::before {
+  content: "💾";
+  font-size: var(--font-size-xl);
+}
+
+/* Checkboxes mejorados */
+.feat-notif-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  cursor: pointer;
+  margin-bottom: var(--spacing-2);
+}
+
+.feat-notif-checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border-medium);
+  transition: all var(--transition-fast);
+}
+
+.feat-notif-checkbox-label input[type="checkbox"]:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+/* Toggle Switch */
+.feat-notif-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.feat-notif-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.feat-notif-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-border-medium);
+  transition: .4s;
+  border-radius: var(--radius-full);
+}
+
+.feat-notif-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .feat-notif-slider {
+  background-color: #3b82f6;
+}
+
+input:checked + .feat-notif-slider:before {
+  transform: translateX(24px);
+}
+
+/* Animaciones */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+@keyframes pulseBlue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+.feat-notif-pulse {
+  animation: pulseBlue 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feat-notif-config-screen {
+    padding: var(--spacing-4);
+  }
+
+  .feat-notif-page-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+  }
+
+  .feat-notif-header-stats {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .feat-notif-stat-box {
+    min-width: calc(33.333% - var(--spacing-3));
+    margin-bottom: var(--spacing-2);
+  }
+
+  .feat-notif-subitems {
+    padding-left: var(--spacing-6);
+  }
+
+  .feat-notif-action-buttons {
+    flex-direction: column;
+  }
+
+  .feat-notif-save-button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .feat-notif-stat-box {
+    min-width: calc(50% - var(--spacing-2));
+  }
+  
+  .feat-notif-channel-label {
+    font-size: var(--font-size-base);
+  }
+}

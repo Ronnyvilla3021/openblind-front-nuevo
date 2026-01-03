@@ -41,6 +41,14 @@ export const API_ENDPOINTS = {
     DELETE: (id) => `/api/admin/soporte/${id}`,
     ADD_RESPUESTA: (id) => `/api/admin/soporte/${id}/respuesta`,
   },
+
+  // Configuración tarjeta id y notificaciones
+  CONFIG_PANTALLAS: {
+    GET: '/api/config/pantallas',
+    UPDATE: '/api/config/pantallas',
+    UPDATE_FIELD: '/api/config/pantallas/field',
+    RESET: '/api/config/pantallas/reset',
+  },
 };
 
 export default API_ENDPOINTS;

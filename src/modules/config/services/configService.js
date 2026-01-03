@@ -11,6 +11,7 @@
  */
 
 import http from '../../../core/services/httpClient';
+import { API_ENDPOINTS } from '../../../core/constants/endpoints';
 
 export const configService = {
   /**
@@ -18,7 +19,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración global
    */
   getConfiguracionGlobal: async () => {
-    return http.get('/api/admin/configuracion');
+    return http.get(API_ENDPOINTS.CONFIG_PANTALLAS.GET);
   },
 
   /**
@@ -28,7 +29,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración actualizada
    */
   updateConfiguracionGlobal: async (data) => {
-    return http.put('/api/admin/configuracion', data);
+    return http.put(API_ENDPOINTS.CONFIG_PANTALLAS.UPDATE, data);
   },
 
   /**
@@ -36,7 +37,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración de Tarjeta ID
    */
   getIDCardConfig: async () => {
-    const response = await http.get('/api/admin/configuracion');
+    const response = await http.get(API_ENDPOINTS.CONFIG_PANTALLAS.GET);
     return {
       success: response.success,
       data: response.data?.idCardConfig || {}
@@ -49,7 +50,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración actualizada
    */
   updateIDCardConfig: async (idCardConfig) => {
-    return http.put('/api/admin/configuracion', { idCardConfig });
+    return http.put(API_ENDPOINTS.CONFIG_PANTALLAS.UPDATE, { idCardConfig });
   },
 
   /**
@@ -57,7 +58,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración de Notificaciones
    */
   getNotificationsConfig: async () => {
-    const response = await http.get('/api/admin/configuracion');
+    const response = await http.get(API_ENDPOINTS.CONFIG_PANTALLAS.GET);
     return {
       success: response.success,
       data: response.data?.notificationsConfig || {}
@@ -70,7 +71,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración actualizada
    */
   updateNotificationsConfig: async (notificationsConfig) => {
-    return http.put('/api/admin/configuracion', { notificationsConfig });
+    return http.put(API_ENDPOINTS.CONFIG_PANTALLAS.UPDATE, { notificationsConfig });
   },
 
   /**
@@ -80,7 +81,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración actualizada
    */
   updateConfigField: async (field, value) => {
-    return http.patch('/api/admin/configuracion/field', { field, value });
+    return http.patch(API_ENDPOINTS.CONFIG_PANTALLAS.UPDATE_FIELD, { field, value });
   },
 
   /**
@@ -89,7 +90,7 @@ export const configService = {
    * @returns {Promise<object>} Configuración reseteada
    */
   resetConfiguracion: async (tipo = 'todo') => {
-    return http.post('/api/admin/configuracion/reset', { tipo });
+    return http.post(API_ENDPOINTS.CONFIG_PANTALLAS.RESET, { tipo });
   },
 };
 

@@ -101,23 +101,21 @@ export default function NotificationsConfigScreen() {
 
       if (response.success) {
         setToast({
-          message:
-            "Configuración de Notificaciones guardada correctamente en MySQL",
+          message: "Configuración guardada correctamente en MySQL",
           type: "success",
         });
         await loadConfig();
       } else {
         setToast({
-          message:
-            "Error: " +
-            (response.message || "No se pudo guardar la configuración"),
+          message: "Error: " + (response.message || "No se pudo guardar"),
           type: "error",
         });
       }
     } catch (error) {
       console.error("Error al guardar configuración:", error);
       setToast({
-        message: "Error de conexión con el servidor",
+        message:
+          "Error de conexión: No se pudo conectar con el servidor en http://localhost:8888", // ✅ Igual que ejemplo
         type: "error",
       });
     } finally {
